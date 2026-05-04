@@ -1,0 +1,16 @@
+# Configuración Apache para ChuckJokesVue
+DirectoryIndex index.php index.html
+
+# Permitir CORS para el endpoint del API
+<IfModule mod_headers.c>
+    <FilesMatch "\.(php)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Tipos MIME
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType text/css .css
+    AddType application/javascript .js
+</IfModule>

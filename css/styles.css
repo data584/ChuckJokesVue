@@ -1,0 +1,166 @@
+/* ============================
+   Reset y estilos generales
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================
+   Encabezado principal
+   ============================ */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.server-info {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* ============================
+   Contenedor principal
+   ============================ */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ============================
+   Estados (loading / error)
+   ============================ */
+.status {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.status.error {
+    background: rgba(231, 76, 60, 0.85);
+}
+
+/* ============================
+   Lista de bromas
+   ============================ */
+.jokes-list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+
+.joke-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #ff6b35;
+}
+
+.joke-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.joke-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #ff6b35;
+    background: #f4f4f4;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.joke-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.joke-number {
+    display: inline-block;
+    background: #ff6b35;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.joke-text {
+    font-size: 1.05rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* ============================
+   Footer
+   ============================ */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    opacity: 0.85;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ============================
+   Responsive
+   ============================ */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .joke-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .joke-content {
+        align-items: center;
+    }
+}
